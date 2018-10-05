@@ -1,4 +1,4 @@
-# vue-skills
+# list-of-skills
 
 ## Project setup
 ```
