@@ -26,7 +26,7 @@ npm run lint
 ```
 
 ### Deploy -> Envio para githubPages
-#### Essa parte irá criar o dist e publicar no branch gh:pages, para isso precisei configurar o vue.config.js e configurar o SSH
+#### Essa parte irá criar o dist e publicar essa pasta no branch gh:pages, para isso precisei configurar o vue.config.js e configurar o SSH
 ##### https://cli.vuejs.org/guide/deployment.html#github-pages
 ##### https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 ```
