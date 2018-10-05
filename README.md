@@ -33,3 +33,19 @@ npm run lint
 ./deploy.sh
 ```
 
+
+### O que estou aprendendo:
+- Vue CLI 3
+- Vue Router
+- Transitions em VueJs (com keyframes e com animate.css)
+- Templates VueJs
+- Babel
+- Fazer deploy do projeto VueJs
+
+
+### O que falta:
+- Configurar PWA (service worker) em VueJs
+- Aprender States e VUEX
+- Integrar Axios para fazer as requisições
+- Integrar algum banco de dados
+
