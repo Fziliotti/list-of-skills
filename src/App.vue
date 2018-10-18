@@ -1,30 +1,29 @@
 <template>
   <div id="app">
-    <header>
-      <h1>VueJs - Lista de habilidades</h1>
+    <header class="header-site">
+      <h1>Planejamento Pessoal</h1>
 
     </header>
+    <div class="container">
+      <nav>
+        <router-link to="/about">Sobre</router-link>
+        <router-link to="/skills"  >Skills</router-link>
+        <router-link to="/todos">Todos</router-link>
+        <router-link to="/expenses">Despesas</router-link>
+      </nav>
 
-    <nav>
-      <router-link to="/">Home</router-link>
-       <router-link to="/about">About</router-link>
-    </nav>
-
-    <transition name="router-anime">
-     <router-view/>
-    </transition>
+      <transition name="router-anime">
+      <router-view/>
+      </transition>
+    </div>
     
   </div>
 </template>
 
 <script>
-import Skills from "./components/Skills.vue";
 
 export default {
-  name: "app",
-  components: {
-    Skills
-  }
+  name: "app"
 };
 </script>
 
@@ -34,10 +33,10 @@ export default {
 body {
   background-color: #eeeeee;
   font-family: "Montserrat", sans-serif;
-  display: grid;
+  /* display: grid;
   grid-template-rows: auto;
-  justify-items: center;
-  padding-top: 50px;
+  justify-items: center; */
+
 }
 
 body,
@@ -46,20 +45,46 @@ html {
   height: 100%;
 }
 #app {
+  width: 100%;
+
+}
+
+.container{
   width: 80%;
+  margin: 1rem auto;
+
+}
+
+.header-site{
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: #323333;
+  color:lightgrey;
 }
 
 nav {
   padding: 20px 20px 20px 0;
 }
 nav a {
+  box-sizing: border-box;
   padding: 10px;
   text-decoration: none;
-  background: #fff;
+  background: #323232;
   border-radius: 3px;
-  color: rgb(0, 110, 255);
+  color: lightgrey;
   font-weight: bold;
   margin-right: 15px;
+  transition: 0.2s all linear;
+  text-transform: uppercase
+}
+
+nav a:hover {
+ background-color: #aaa;
+ color:#323232;
+ 
 }
 
 .router-anime-enter-active {
