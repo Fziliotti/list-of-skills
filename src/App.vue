@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <h1>VueJs - List of skillss</h1>
+      <h1>VueJs - Lista de habilidades</h1>
 
     </header>
 
