@@ -66,7 +66,10 @@ html {
 }
 
 nav {
-  padding: 20px 20px 20px 0;
+ display: flex;
+ align-items: center;
+ justify-content:start;
+ margin: 1.4rem 0;
 }
 nav a {
   box-sizing: border-box;
@@ -78,7 +81,21 @@ nav a {
   font-weight: bold;
   margin-right: 15px;
   transition: 0.2s all linear;
-  text-transform: uppercase
+  text-transform: capitalize;
+}
+
+@media (max-width: 576px) {
+nav {
+ flex-direction: column;
+}
+
+nav a {
+  flex-basis: 100%;
+  display: block;
+  width: 100%;
+  margin: 0.4rem 0;
+  text-align: center;
+}
 }
 
 nav a:hover {
