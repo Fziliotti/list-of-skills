@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <header>
-      <h1>Lista de skills</h1>
+      <h1>VueJs - List of skills</h1>
+
     </header>
 
     <nav>
@@ -18,6 +19,7 @@
 
 <script>
 import Skills from "./components/Skills.vue";
+
 export default {
   name: "app",
   components: {
