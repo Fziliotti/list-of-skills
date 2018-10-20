@@ -31,7 +31,7 @@ export default {
     return {
       checked: false,
       todo: "",
-      todos: [{ todo: "Brincar" }, { todo: "Estudar" }]
+      todos: JSON.parse(localStorage.getItem('lista_todos')) || []
     };
   },
   methods: {
@@ -40,11 +40,15 @@ export default {
         if (result) {
           this.todos.push({ todo: this.todo });
           this.todo = "";
+          this.saveToStorage();
         }
       });
     },
     remove(id) {
       this.todos.splice(id, 1);
+    },
+    saveToStorage(){
+      localStorage.setItem('lista_todos', JSON.stringify(this.todos));
     }
   }
 };

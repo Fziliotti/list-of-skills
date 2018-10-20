@@ -20,11 +20,11 @@ export default new Router({
             name: 'about',
             component: About
         },
-        {
-            path: '/about/:name',
-            name: 'about',
-            component: About
-        },
+        // {
+        //     path: '/about/:name',
+        //     name: 'about',
+        //     component: About
+        // },
         {
             path: '/expenses/',
             name: 'expense',

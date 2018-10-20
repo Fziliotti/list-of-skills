@@ -31,7 +31,7 @@ export default {
     return {
       checked: false,
       skill: "",
-      skills: [{ skill: "Vuejs" }, { skill: "Jquery" }]
+      skills: JSON.parse(localStorage.getItem('lista_skills')) || []
     };
   },
   methods: {
@@ -40,11 +40,15 @@ export default {
         if (result) {
           this.skills.push({ skill: this.skill });
           this.skill = "";
+          this.saveToStorage();
         }
       });
     },
     remove(id) {
       this.skills.splice(id, 1);
+    },
+    saveToStorage(){
+      localStorage.setItem('lista_skills', JSON.stringify(this.skills));
     }
   }
 };

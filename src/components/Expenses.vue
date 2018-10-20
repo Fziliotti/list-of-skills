@@ -31,7 +31,7 @@ export default {
     return {
       checked: false,
       expense: "",
-      expenses: [{ expense: "Mohamed" }, { expense: "Restaurante" }]
+      expenses: JSON.parse(localStorage.getItem('lista_expenses')) || []
     };
   },
   methods: {
@@ -40,11 +40,15 @@ export default {
         if (result) {
           this.expenses.push({ expense: this.expense });
           this.expense = "";
+          this.saveToStorage();
         }
       });
     },
     remove(id) {
       this.expenses.splice(id, 1);
+    },
+    saveToStorage(){
+      localStorage.setItem('lista_expenses', JSON.stringify(this.expenses));
     }
   }
 };
