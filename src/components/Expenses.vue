@@ -46,6 +46,7 @@ export default {
     },
     remove(id) {
       this.expenses.splice(id, 1);
+      this.saveToStorage();
     },
     saveToStorage(){
       localStorage.setItem('lista_expenses', JSON.stringify(this.expenses));

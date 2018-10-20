@@ -46,6 +46,7 @@ export default {
     },
     remove(id) {
       this.todos.splice(id, 1);
+      this.saveToStorage();
     },
     saveToStorage(){
       localStorage.setItem('lista_todos', JSON.stringify(this.todos));

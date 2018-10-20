@@ -46,6 +46,7 @@ export default {
     },
     remove(id) {
       this.skills.splice(id, 1);
+      this.saveToStorage();
     },
     saveToStorage(){
       localStorage.setItem('lista_skills', JSON.stringify(this.skills));
